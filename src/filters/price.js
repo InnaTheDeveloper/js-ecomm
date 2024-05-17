@@ -7,9 +7,9 @@ const setupPrice = (store) => {
 
   // setup filter
   let maxPrice = store.map((product) => product.price);
-  console.log('maxPrice', maxPrice);
+
   maxPrice = Math.max(...maxPrice);
-  console.log(maxPrice);
+ 
   maxPrice = Math.ceil(maxPrice / 100);
   priceInput.value = maxPrice;
   priceInput.max = maxPrice;
