@@ -1,7 +1,6 @@
 import { formatPrice } from './utils.js';
 import { addToCart } from './cart/setupCart.js';
 const display = (products, element, filters) => {
-  console.log('products', products, 'element', element);
   // display products
   element.innerHTML = products
     .map((product) => {
@@ -36,7 +35,6 @@ const display = (products, element, filters) => {
     if (parent.classList.contains('product-cart-btn')) {
       addToCart(parent.dataset.id);
     }
-    console.log('parent', parent);
   });
 };
 // payment processors look for prices in the smallest single unit in that currenct, so for dollars - we will have prices in cents. and all calculations we should set up and calculate in cents but we need to display them in dollars
